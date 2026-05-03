@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – iWorkOrder by DCA</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f8fa;
+      --white: #ffffff;
+      --surface: #f0f2f6;
+      --border: #dde1ea;
+      --blue: #0055cc;
+      --blue-light: #e8efff;
+      --blue-mid: rgba(0,85,204,0.1);
+      --text: #1a1d26;
+      --muted: #636a80;
+      --light: #8890a6;
+      --green: #1a7a42;
+      --green-bg: #eaf5ee;
+      --red: #b91c1c;
+      --red-bg: #fef2f2;
+      --serif: 'IBM Plex Serif', Georgia, serif;
+      --sans: 'IBM Plex Sans', system-ui, sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15.5px;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 40px;
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-icon svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .brand-name {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-name span { color: var(--blue); }
+
+    .header-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 40px 48px;
+    }
+
+    .hero-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-light);
+      border: 1px solid rgba(0,85,204,0.2);
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* ── Page body ── */
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 40px 100px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── Sidebar TOC ── */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+    }
+
+    .toc-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style: none;
+      border-left: 2px solid var(--border);
+    }
+
+    .toc-list li a {
+      display: block;
+      padding: 6px 0 6px 14px;
+      font-size: 0.83rem;
+      color: var(--muted);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color 0.15s, border-color 0.15s;
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+    }
+
+    .toc-list li a:hover { color: var(--blue); border-left-color: var(--blue); }
+
+    .toc-num {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--light);
+      margin-right: 4px;
+    }
+
+    /* ── Main content ── */
+    .main {}
+
+    /* Scope notice */
+    .scope-banner {
+      background: var(--blue-light);
+      border: 1px solid rgba(0,85,204,0.2);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      font-size: 0.9rem;
+      color: #003999;
+    }
+
+    .scope-banner .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* Section */
+    .section {
+      margin-bottom: 44px;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--blue);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .section p {
+      color: #444a60;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    /* Subsection */
+    .subsection { margin: 16px 0 0; }
+
+    .subsection-title {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .subsection-title::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 13px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    /* Lists */
+    ul.policy-list {
+      list-style: none;
+      margin: 8px 0 14px;
+    }
+
+    ul.policy-list li {
+      position: relative;
+      padding: 5px 0 5px 18px;
+      font-size: 0.93rem;
+      color: #444a60;
+      border-bottom: 1px solid #eef0f5;
+    }
+
+    ul.policy-list li:last-child { border-bottom: none; }
+
+    ul.policy-list li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    /* Do/Don't grid */
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .do-box, .dont-box {
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .do-box {
+      background: var(--green-bg);
+      border: 1px solid rgba(26,122,66,0.2);
+    }
+
+    .dont-box {
+      background: var(--red-bg);
+      border: 1px solid rgba(185,28,28,0.15);
+    }
+
+    .do-box .box-head, .dont-box .box-head {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .do-box .box-head { color: var(--green); }
+    .dont-box .box-head { color: var(--red); }
+
+    .do-box ul, .dont-box ul { list-style: none; }
+
+    .do-box li, .dont-box li {
+      font-size: 0.88rem;
+      padding: 3px 0 3px 18px;
+      position: relative;
+    }
+
+    .do-box li { color: #1a4a2e; }
+    .dont-box li { color: #7f1d1d; }
+
+    .do-box li::before { content: '✓'; position: absolute; left: 0; color: var(--green); }
+    .dont-box li::before { content: '✕'; position: absolute; left: 0; color: var(--red); }
+
+    /* State grid */
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .state-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .state-abbr {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--blue);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      margin-bottom: 3px;
+    }
+
+    .state-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .state-law {
+      font-size: 0.73rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      margin-top: 2px;
+    }
+
+    /* iCloud callout */
+    .icloud-box {
+      background: linear-gradient(135deg, #f0f5ff 0%, #e8f0fe 100%);
+      border: 1px solid rgba(0,85,204,0.18);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-top: 16px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .icloud-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .icloud-body {}
+    .icloud-body strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .icloud-body p {
+      font-size: 0.88rem;
+      color: #3a4a70;
+      margin: 0;
+    }
+
+    .icloud-body a {
+      color: var(--blue);
+      font-size: 0.83rem;
+      font-family: var(--mono);
+      word-break: break-all;
+    }
+
+    /* Info note */
+    .note {
+      background: var(--surface);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .right-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .right-card .r-title {
+      font-weight: 600;
+      font-size: 0.87rem;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .right-card .r-title span {
+      font-size: 1rem;
+    }
+
+    .right-card .r-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 0.9rem;
+      color: var(--blue);
+      background: var(--blue-light);
+      border: 1px solid rgba(0,85,204,0.2);
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .contact-email:hover { background: rgba(0,85,204,0.15); }
+
+    /* Footer */
+    footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--light);
+    }
+
+    footer strong { color: var(--muted); font-weight: 500; }
+
+    /* Scroll to top */
+    #scrollTop {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 40px;
+      height: 40px;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(0,85,204,0.3);
+      z-index: 200;
+    }
+
+    #scrollTop.visible { opacity: 1; pointer-events: all; }
+    #scrollTop:hover { transform: translateY(-2px); }
+
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .meta-pills { align-items: flex-start; }
+      .do-dont { grid-template-columns: 1fr; }
+      .rights-grid { grid-template-columns: 1fr; }
+      header, .hero, footer { padding-left: 20px; padding-right: 20px; }
+      .page { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg>
+      </div>
+      <div class="brand-name">i<span>Work</span>Order <span style="color:var(--muted);font-weight:400;font-size:0.85em;">by DCA</span></div>
+    </div>
+    <div class="header-meta">Privacy Policy · Effective 05/02/2026</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">📄 Legal Document</div>
+      <h1>Privacy Policy</h1>
+      <div class="hero-sub">iWorkOrder by DCA — Property Maintenance Workflow Management</div>
+    </div>
+    <div class="meta-pills">
+      <div class="pill"><span class="pill-dot"></span> Effective: 05/02/2026</div>
+      <div class="pill">🇺🇸 U.S. Only</div>
+      <div class="pill">☁️ iCloud Storage</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1"><span class="toc-num">1.</span> Scope</a></li>
+      <li><a href="#s2"><span class="toc-num">2.</span> Information We Collect</a></li>
+      <li><a href="#s3"><span class="toc-num">3.</span> How We Use Information</a></li>
+      <li><a href="#s4"><span class="toc-num">4.</span> Legal Basis</a></li>
+      <li><a href="#s5"><span class="toc-num">5.</span> Your Rights</a></li>
+      <li><a href="#s6"><span class="toc-num">6.</span> Data Retention</a></li>
+      <li><a href="#s7"><span class="toc-num">7.</span> Data Security</a></li>
+      <li><a href="#s8"><span class="toc-num">8.</span> Children's Privacy</a></li>
+      <li><a href="#s9"><span class="toc-num">9.</span> Third-Party Services</a></li>
+      <li><a href="#s10"><span class="toc-num">10.</span> Policy Changes</a></li>
+      <li><a href="#s11"><span class="toc-num">11.</span> Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <div class="scope-banner">
+      <span class="icon">🇺🇸</span>
+      <div>This Privacy Policy applies exclusively to users of the <strong>iWorkOrder by DCA</strong> mobile application located within the United States. By using the app, you confirm that you are a U.S.-based user.</div>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="s1">
+      <div class="section-head">
+        <span class="section-num">§ 01</span>
+        <h2>Scope</h2>
+      </div>
+      <p>iWorkOrder by DCA ("we", "our", or "us") — developed by Damian Cedeno Almeida (DCA) — is a mobile application designed for property maintenance workflow management, intended exclusively for use within the United States. By downloading and using the app, you confirm that you are located in the U.S. and agree to this Privacy Policy.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 2 -->
+    <div class="section" id="s2">
+      <div class="section-head">
+        <span class="section-num">§ 02</span>
+        <h2>Information We Collect</h2>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">A. Information You Provide</div>
+        <ul class="policy-list">
+          <li>Property details (addresses, building names)</li>
+          <li>Work orders, notes, and descriptions</li>
+          <li>Photos and attachments (if used)</li>
+          <li>User-entered names (e.g., superintendent, handyman)</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">B. Automatically Stored Data</div>
+        <ul class="policy-list">
+          <li>Timestamps of actions</li>
+          <li>Audit logs (immutable records of changes)</li>
+          <li>Device identifiers (limited, non-tracking)</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-title">C. iCloud Storage</div>
+        <div class="icloud-box">
+          <div class="icloud-icon">☁️</div>
+          <div class="icloud-body">
+            <strong>All data is stored in your Apple iCloud account</strong>
+            <p>We do not store your data on any external or third-party servers. All user data is stored using Apple iCloud services, under your personal Apple ID. Apple may process your data under their own privacy policies.</p>
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy/ ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 3 -->
+    <div class="section" id="s3">
+      <div class="section-head">
+        <span class="section-num">§ 03</span>
+        <h2>How We Use Information</h2>
+      </div>
+
+      <div class="do-dont">
+        <div class="do-box">
+          <div class="box-head">✓ We Do</div>
+          <ul>
+            <li>Operate the app</li>
+            <li>Sync data between your devices via iCloud</li>
+            <li>Maintain audit logs for legal records</li>
+            <li>Generate PDF exports for documentation</li>
+          </ul>
+        </div>
+        <div class="dont-box">
+          <div class="box-head">✕ We Do Not</div>
+          <ul>
+            <li>Sell your data</li>
+            <li>Share data with advertisers</li>
+            <li>Track users across apps</li>
+            <li>Store data on external servers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 4 -->
+    <div class="section" id="s4">
+      <div class="section-head">
+        <span class="section-num">§ 04</span>
+        <h2>Legal Basis — State Compliance</h2>
+      </div>
+      <p>iWorkOrder by DCA aligns with major U.S. state privacy laws. We respect user rights under each applicable framework.</p>
+      <div class="state-grid">
+        <div class="state-card">
+          <div class="state-abbr">CA</div>
+          <div class="state-name">California</div>
+          <div class="state-law">CCPA / CPRA</div>
+        </div>
+        <div class="state-card">
+          <div class="state-abbr">VA</div>
+          <div class="state-name">Virginia</div>
+          <div class="state-law">VCDPA</div>
+        </div>
+        <div class="state-card">
+          <div class="state-abbr">CO</div>
+          <div class="state-name">Colorado</div>
+          <div class="state-law">CPA</div>
+        </div>
+        <div class="state-card">
+          <div class="state-abbr">CT</div>
+          <div class="state-name">Connecticut</div>
+          <div class="state-law">CTDPA</div>
+        </div>
+        <div class="state-card">
+          <div class="state-abbr">UT</div>
+          <div class="state-name">Utah</div>
+          <div class="state-law">UCPA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 5 -->
+    <div class="section" id="s5">
+      <div class="section-head">
+        <span class="section-num">§ 05</span>
+        <h2>Your Rights (U.S. Users)</h2>
+      </div>
+      <p>Depending on your state, you may have the following rights regarding your personal data:</p>
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="r-title"><span>🔍</span> Access</div>
+          <div class="r-desc">Request a copy of the personal data we hold about you.</div>
+        </div>
+        <div class="right-card">
+          <div class="r-title"><span>🗑</span> Deletion</div>
+          <div class="r-desc">Request deletion of your personal data from our systems.</div>
+        </div>
+        <div class="right-card">
+          <div class="r-title"><span>✏️</span> Correction</div>
+          <div class="r-desc">Request that inaccurate or incomplete data be corrected.</div>
+        </div>
+        <div class="right-card">
+          <div class="r-title"><span>📤</span> Export</div>
+          <div class="r-desc">Request your data in a portable, machine-readable format.</div>
+        </div>
+      </div>
+      <div class="note">
+        Because all data is stored in iCloud, most deletion and export actions can be performed directly through your device or Apple iCloud settings — giving you full control without needing to contact us.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 6 -->
+    <div class="section" id="s6">
+      <div class="section-head">
+        <span class="section-num">§ 06</span>
+        <h2>Data Retention</h2>
+      </div>
+      <ul class="policy-list">
+        <li>Data is retained as long as it exists in your iCloud account</li>
+        <li>Audit logs are not altered or deleted automatically — they are preserved for legal integrity</li>
+        <li>You control deletion directly via your Apple account and device settings</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 7 -->
+    <div class="section" id="s7">
+      <div class="section-head">
+        <span class="section-num">§ 07</span>
+        <h2>Data Security</h2>
+      </div>
+      <p>We rely on Apple's robust security infrastructure to protect your data:</p>
+      <ul class="policy-list">
+        <li>Apple iCloud end-to-end encryption</li>
+        <li>iOS device-level security (Face ID, passcode, Secure Enclave)</li>
+        <li>No external databases or third-party servers</li>
+      </ul>
+      <div class="note">
+        Despite these protections, no system is 100% secure. If you believe your account has been compromised, please contact Apple Support and reach out to us immediately.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 8 -->
+    <div class="section" id="s8">
+      <div class="section-head">
+        <span class="section-num">§ 08</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>iWorkOrder by DCA is a professional tool intended for users aged 18 and older. We do not knowingly collect any personal information from individuals under 18. If you believe a minor has used our app, please contact us immediately.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 9 -->
+    <div class="section" id="s9">
+      <div class="section-head">
+        <span class="section-num">§ 09</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>iWorkOrder integrates with exactly one third-party service:</p>
+      <div class="icloud-box">
+        <div class="icloud-icon">☁️</div>
+        <div class="icloud-body">
+          <strong>Apple iCloud — the only third party we rely on</strong>
+          <p>We use no analytics SDKs, no advertising networks, and no third-party trackers of any kind. Your data stays between you and Apple.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 10 -->
+    <div class="section" id="s10">
+      <div class="section-head">
+        <span class="section-num">§ 10</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make significant changes, we will notify you within the app. Continued use of iWorkOrder by DCA after any update constitutes your acceptance of the revised policy.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 11 -->
+    <div class="section" id="s11">
+      <div class="section-head">
+        <span class="section-num">§ 11</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-box">
+        <p>Have questions or concerns about this Privacy Policy or how we handle your data?<br>Contact <strong>Damian Cedeno Almeida (DCA)</strong>, developer of iWorkOrder.</p>
+        <a href="mailto:damianced@hotmail.com" class="contact-email">✉ damianced@hotmail.com</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <strong>iWorkOrder by DCA</strong> · Developed by Damian Cedeno Almeida · Privacy Policy · Effective May 2, 2026 · United States Only
+</footer>
+
+<button id="scrollTop" title="Back to top">↑</button>
+
+<script>
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 300);
+  });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>
